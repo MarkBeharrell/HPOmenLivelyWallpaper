@@ -1,4 +1,4 @@
-# HPOmenWallpaper
+# HPOmenLivelyWallpaper
 An animated HP Omen wallpaper using HTML, CSS, Blobz and Lively
 
 I wanted something sleek as opposed to some of the options that the HP Gaming Hub offers.

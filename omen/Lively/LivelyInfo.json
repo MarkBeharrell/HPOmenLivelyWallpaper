@@ -1,0 +1,14 @@
+{
+  "AppVersion": "1.0.0.1",
+  "Title": "HP OMEN Dynamic Desktop",
+  "Thumbnail": "omen.jpg",
+  "Preview": "omen.gif",
+  "Desc": "Super simple html/css animated desktop using Blobz by Torus Kit.",
+  "Author": "Mark Beharrell",
+  "License": null,
+  "Contact": "",
+  "Type": 1,
+  "FileName": "omen.html",
+  "Arguments": "",
+  "IsAbsolutePath": false
+}

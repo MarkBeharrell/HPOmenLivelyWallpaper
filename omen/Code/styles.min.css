@@ -1,0 +1,183 @@
+.tk-blob {
+    animation: blob-turn var(--time, 30s) linear infinite, color_change var(--time, 30s) infinite alternate;
+    position: relative;
+    transform-origin: center;
+    filter: blur(40px)
+}
+
+html>* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+body,
+html {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+    background: #000;
+    pointer-events: none;
+    overflow: hidden
+}
+
+.tk-blob svg {
+    animation: blob-skew calc(var(--time, 30s) * .5) linear 0s infinite;
+    transform-origin: center
+}
+
+.tk-blob svg path {
+    animation: blob-scale calc(var(--time, 30s) * .5) ease-in-out 0s infinite;
+    transform-origin: center
+}
+
+.blobHolder {
+    width: 400px;
+    height: 400px;
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
+    position: absolute
+}
+
+.blobHolder img {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%
+}
+
+@keyframes blob-turn {
+    0% {
+        transform: rotate(0)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes blob-skew {
+    0% {
+        transform: skewY(0)
+    }
+
+    13% {
+        transform: skewY(calc((1.8deg) * var(--amount, 2)))
+    }
+
+    18% {
+        transform: skewY(calc((2.2deg) * var(--amount, 2)))
+    }
+
+    24% {
+        transform: skewY(calc((2.48deg) * var(--amount, 2)))
+    }
+
+    25% {
+        transform: skewY(calc((2.5deg) * var(--amount, 2)))
+    }
+
+    26% {
+        transform: skewY(calc((2.48deg) * var(--amount, 2)))
+    }
+
+    32% {
+        transform: skewY(calc((2.2deg) * var(--amount, 2)))
+    }
+
+    37% {
+        transform: skewY(calc((1.8deg) * var(--amount, 2)))
+    }
+
+    50% {
+        transform: skewY(0)
+    }
+
+    63% {
+        transform: skewY(calc((-1.8deg) * var(--amount, 2)))
+    }
+
+    68% {
+        transform: skewY(calc((-2.2deg) * var(--amount, 2)))
+    }
+
+    74% {
+        transform: skewY(calc((-2.48deg) * var(--amount, 2)))
+    }
+
+    75% {
+        transform: skewY(calc((-2.5deg) * var(--amount, 2)))
+    }
+
+    76% {
+        transform: skewY(calc((-2.48deg) * var(--amount, 2)))
+    }
+
+    82% {
+        transform: skewY(calc((-2.2deg) * var(--amount, 2)))
+    }
+
+    87% {
+        transform: skewY(calc((-1.8deg) * var(--amount, 2)))
+    }
+
+    100% {
+        transform: skewY(0)
+    }
+}
+
+@keyframes blob-scale {
+    0% {
+        transform: scaleX(.9) scaleY(1)
+    }
+
+    25% {
+        transform: scaleX(.9) scaleY(.9)
+    }
+
+    50% {
+        transform: scaleX(1) scaleY(.9)
+    }
+
+    75% {
+        transform: scaleX(.9) scaleY(.9)
+    }
+
+    100% {
+        transform: scaleX(.9) scaleY(1)
+    }
+}
+
+@keyframes color_change {
+    0% {
+        fill: #41b9d1
+    }
+
+    20% {
+        fill: #9bff1b
+    }
+
+    40% {
+        fill: #f27e18
+    }
+
+    60% {
+        fill: #ffd700
+    }
+
+    80% {
+        fill: #ff0066
+    }
+
+    100% {
+        fill: #41b9d1
+    }
+}
